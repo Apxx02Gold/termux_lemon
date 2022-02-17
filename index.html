@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2020 -->
+  
+<!-- Mirrored from hax4us.github.io/2021-10-29-install-lemon-or-l3mon-in-termux/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Feb 2022 20:59:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Instalar L3MON en Termux</title>
+
+  <meta name="author" content="Lokesh Pandey">
+  <meta name="theme-color" content="#a50509">
+  <meta name="description" content="My name is Lokesh Pandey, I am an avid open source enthusiast, contributor and developer living in Delhi, India. I obtained my Bachelor of Computer Appplication degree in Ghaziabad, India. I am a student who loves to contribute in open source projects , modifying softwares and porting softwares for Android. Also, I am very fond of video games, apart from these I love listening to music and Guitar is one of the my best friend , i love to spend time with my Guitar. Dancing is my other passion.">
+  <meta name="keywords" content="lokesh pandey, geek, linux,  math, mathematics, computer science, termux, android">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+  <!-- MathJax -->
+  <script type="text/x-mathjax-config">MathJax.Hub.Config({messageStyle: 'none',tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+  <script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+
+  <link rel="alternate" type="application/rss+xml" title="Hax4Us - Welcome To Android World!" href="https://hax4us.github.io/feed.xml">
+
+  
+  
+<!-- Google Analytics -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-172514231-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+  
+  
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="https://hax4us.github.io/assets/css/bootstrap.min.css">
+    
+      <link rel="stylesheet" href="https://hax4us.github.io/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="https://hax4us.github.io/assets/css/main.css">
+    
+      <link rel="stylesheet" href="https://hax4us.github.io/assets/css/particle-js-style.css">
+    
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Install LEMON Or L3MON In Termux">
+  
+
+   
+  <meta property="og:description" content="A quick soltion for installing lemon">
+  
+
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="Lokesh Pandey">
+  <meta property="og:article:published_time" content="2021-10-29T00:00:00+05:30">
+  
+
+  
+  <meta property="og:url" content="https://hax4us.github.io/2021-10-29-install-lemon-or-l3mon-in-termux/">
+  <link rel="canonical" href="index.html">
+  
+
+  
+  <meta property="og:image" content="/img/logo.jpg">
+  
+  
+
+  <!-- Twitter summary cards -->
+  
+  <meta name="instagram:card" content="summary_large_image">
+  
+  <meta name="instagram:card" content="summary">
+  <meta name="instagram:site" content="@hax4us">
+  <meta name="instagram:creator" content="@hax4us">
+
+  
+  <meta name="twitter:title" content="Install LEMON Or L3MON In Termux">
+  
+
+  
+  <meta name="twitter:description" content="A quick soltion for installing lemon">
+  
+
+  
+  <meta name="twitter:image" content="/img/logo.jpg">
+  
+
+</head>
+
+
+  <body>
+
+  <div class="mobile-js-hide">
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+  </div>
+
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom "><a class="navbar-brand" href="https://hax4us.github.io/">Hax4Us</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="https://github.com/hax4us/TermuxBlack">TermuxBlack</a>
+                  <a class="dropdown-item" href="https://github.com/hax4us/Apkmod">Apkmod</a>
+            </div>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://hax4us.github.io/aboutme">About Me</a>
+          </li></ul>
+  </div>
+
+<!-- ALways use my avatar, irrespective of the post image -->
+  <div class="avatar-container">
+    <div class="avatar-img-border">
+      <a href="https://hax4us.github.io/">
+        <img alt="Only Android No PC" class="avatar-img" src="img/logo.jpg" />
+     </a>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+
+    <!-- particles.js exclusion -->
+<style>
+  #particles-js{
+      display: none;
+  }
+</style>
+
+<!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Instalar L3MON en Termux</h1>
+      
+
+      <h2 class="post-subheading">Una solución rápida para instalar lemon</h2>    
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+<div class="container-md">
+  <div class="row">                                                       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      
+
+      <article role="main" class="blog-post">
+        <p>A continuación les mostrare los pasos a seguir para instalar L3MOM correctamente 🐙</p>
+
+<h3 id="requirements-">REQUISITOS :</h3>
+
+<ul>
+  <li>
+	  <p>apkmod ( Instalar desde <a href="https://github.com/hax4us/Apkmod">aquí></a> )</p>
+  </li>
+  <li>
+    <p>Paquete Lemon Deb  <a href="https://t.me/hax4us_group">(Obtener en el Telegram oficial)</a></p>
+  </li>
+</ul>
+
+<h3 id="installation-steps-">Pasos de instalación :</h3>
+
+<ol>
+  <li>
+    <p>Descarga el paquete lemon deb del telegram oficial</p>
+  </li>
+  <li>
+    <p>Luego instale apkmod</p>
+  </li>
+  <li>Instale la versión anterior de nodejs y npm
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt <span class="nb">install </span>nodejs <span class="o">&amp;&amp;</span> npm <span class="nb">install</span> <span class="nt">-g</span> npm@6.14.10
+</code></pre></div>    </div>
+  </li>
+  <li>Ahora instale el paquete deb
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dpkg <span class="nt">-i</span> lemon_2.1-2_all.deb
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="tips-">CONSEJOS :</h3>
+<ul>
+  <li>
+    <p>Para iniciar el servidor</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  lemon
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Si inició el servidor por primera vez, presione <strong>CTRL+C</strong> y edite el archivo <code class="language-plaintext highlighter-rouge">maindb.json</code></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  vi <span class="nv">$PREFIX</span>/share/lemon/server/maindb.json
+</code></pre></div>    </div>
+<p>Establezca la contraseña en Md5 Ejemplo:<code class="language-plaintext highlighter-rouge">098f6bcd4621d373cade4e832627b4f6</code> peguelo en el campo de password 👇🏽
+  <img src="https://hax4us.github.io/assets/img/2021/2021-10-29/1.jpg" /></p>
+  </li>
+  <li>
+    <p>Ahora guarde e inicie el servidor usando el comando <code class="language-plaintext highlighter-rouge">lemon</code> en el navegador escriba <code class="language-plaintext highlighter-rouge"> 127.0.0.1:22533 </code> desde el navegador <code class="language-plaintext highlighter-rouge"></code> escriba usuario y<code class="language-plaintext highlighter-rouge"></code> contraseña establecida</p>
+  </li>
+</ul>
+
+      </article>
+
+      
+</body>
