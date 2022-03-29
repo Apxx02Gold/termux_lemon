@@ -1,4 +1,8 @@
-# termux_lemon
+# TERMUX_L3MON
+# RUTA CONFIG
+
+$PREFIX/share/lemon/server/maindb.json
+
 # ARCHIVO CONFIG
 
 {
