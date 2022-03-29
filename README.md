@@ -1,6 +1,6 @@
 # termux_lemon
+# ARCHIVO CONFIG
 
-<h1>
 {
   "admin": {
     "username": "admin",
@@ -11,4 +11,3 @@
   },
   "clients": []
 }
-</h1>
